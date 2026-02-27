@@ -63,7 +63,7 @@ nav a:hover {
   height: 100vh;
   width: 100%;
   position: relative;
-  background: url("images/hero.png") center/cover no-repeat;
+  background: url("hero.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -558,4 +558,5 @@ nav a:hover::after {
 
 nav a.active {
   color: #d8cfc4;
+
 }
