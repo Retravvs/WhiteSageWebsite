@@ -1,0 +1,139 @@
+:root {
+  --base: #F4F1EA;
+  --depth: #2F3E38;
+  --action: #4F6F60;
+  --highlight: #D8CFC4;
+  --gold: #C2A65A;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--base);
+  color: var(--depth);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+body.loaded { opacity:1; }
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:var(--depth);
+}
+
+.logo { color:var(--gold); font-weight:600; }
+
+nav a {
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  transition:.3s;
+}
+
+nav a:hover { color:var(--gold); }
+
+.product-container {
+  max-width:1100px;
+  margin:80px auto;
+  display:flex;
+  gap:70px;
+  background:white;
+  padding:60px;
+  border-radius:30px;
+  box-shadow:0 30px 60px rgba(0,0,0,.08);
+}
+
+.product-image img {
+  width:420px;
+  border-radius:20px;
+  transition:.4s;
+  cursor:pointer;
+}
+
+.product-image img:hover {
+  transform:scale(1.05);
+}
+
+.thumbnail-row {
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.thumbnail-row img {
+  width:80px;
+  border-radius:10px;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+.thumbnail-row img:hover {
+  border:2px solid var(--gold);
+}
+
+.rating { color:var(--gold); }
+.price { color:var(--action); font-size:28px; margin:15px 0; }
+
+.product-description { line-height:1.7; color:#555; }
+
+.trust-badges {
+  margin:15px 0;
+  color:var(--action);
+  font-size:14px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.quantity input {
+  padding:10px;
+  width:70px;
+  border-radius:10px;
+  border:1px solid var(--highlight);
+  margin-left:10px;
+}
+
+.btn {
+  margin-top:25px;
+  padding:14px 40px;
+  background:var(--action);
+  border:none;
+  border-radius:14px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn:hover {
+  background:var(--depth);
+  transform:translateY(-3px);
+}
+
+/* Floating Cart */
+.cart-preview {
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:var(--depth);
+  color:white;
+  padding:15px 25px;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,.2);
+  font-size:14px;
+  display:none;
+}
+
+@media(max-width:900px){
+  .product-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .product-image img{
+    width:100%;
+  }
+}
